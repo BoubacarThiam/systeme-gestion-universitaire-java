@@ -2,15 +2,11 @@ package model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.List;
 
-/**
- * Classe représentant un étudiant dans le système universitaire
- * @author Votre Nom
- * @version 1.0
- */
 public class Etudiant {
     
-    // Attributs privés (encapsulation)
+    // Attributs privés
     private String id;
     private String nom;
     private String prenom;
