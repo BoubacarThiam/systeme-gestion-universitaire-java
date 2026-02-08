@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * Service de gestion des notes
- * Contient toute la logique métier relative aux notes
+ * Contient toute la logique métier relative aux notes.
  */
 public class NoteService {
     
