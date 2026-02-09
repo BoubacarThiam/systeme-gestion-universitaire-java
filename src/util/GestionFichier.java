@@ -14,8 +14,6 @@ import java.util.List;
 /**
  * Classe utilitaire pour la gestion de la persistance des données
  * Sauvegarde et chargement depuis des fichiers texte
- * @author Votre Nom
- * @version 1.0
  */
 public class GestionFichier {
     

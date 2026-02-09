@@ -12,7 +12,7 @@ public class Enseignant {
     /**
      * Constructeur complet
      */
-    public Enseignant(String id, String nom, String prenom, String email, String specialite) {
+    public Enseignant (String id, String nom, String prenom, String email, String specialite) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
