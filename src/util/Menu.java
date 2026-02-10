@@ -403,9 +403,9 @@ public class Menu {
         int coefficient = coeffStr.isEmpty() ? matiere.getCoefficient() : Integer.parseInt(coeffStr);
         
         if (matiereService.modifierMatiere(code, nom, coefficient)) {
-            System.out.println("✅ Matière modifiée avec succès !");
+            System.out.println(" Matière modifiée avec succès !");
         } else {
-            System.out.println("❌ Erreur lors de la modification.");
+            System.out.println(" Erreur lors de la modification.");
         }
     }
     
@@ -421,7 +421,7 @@ public class Menu {
         Matiere matiere = matiereService.rechercherMatiere(code);
         
         if (matiere == null) {
-            System.out.println("❌ Matière non trouvée.");
+            System.out.println(" Matière non trouvée.");
             return;
         }
         
@@ -431,9 +431,9 @@ public class Menu {
         
         if (confirmation.equalsIgnoreCase("O")) {
             if (matiereService.supprimerMatiere(code)) {
-                System.out.println("✅ Matière supprimée avec succès !");
+                System.out.println(" Matière supprimée avec succès !");
             } else {
-                System.out.println("❌ Erreur lors de la suppression.");
+                System.out.println(" Erreur lors de la suppression.");
             }
         } else {
             System.out.println("ℹ Suppression annulée.");
@@ -475,7 +475,7 @@ public class Menu {
         Matiere matiere = matiereService.rechercherMatiere(code);
         
         if (matiere == null) {
-            System.out.println("❌ Matière non trouvée.");
+            System.out.println(" Matière non trouvée.");
             return;
         }
         
@@ -484,9 +484,9 @@ public class Menu {
         String enseignantId = scanner.nextLine();
         
         if (matiereService.associerEnseignant(code, enseignantId)) {
-            System.out.println("✅ Enseignant associé avec succès !");
+            System.out.println(" Enseignant associé avec succès !");
         } else {
-            System.out.println("❌ Erreur lors de l'association.");
+            System.out.println(" Erreur lors de l'association.");
         }
     }
     
@@ -529,11 +529,11 @@ public class Menu {
                         retour = true;
                         break;
                     default:
-                        System.out.println("❌ Choix invalide.");
+                        System.out.println(" Choix invalide.");
                 }
                 
             } catch (InputMismatchException e) {
-                System.out.println("❌ Erreur : Veuillez entrer un nombre valide.");
+                System.out.println(" Erreur : Veuillez entrer un nombre valide.");
                 scanner.nextLine();
             }
         }
@@ -550,7 +550,7 @@ public class Menu {
         
         Etudiant etudiant = etudiantService.rechercherEtudiant(etudiantId);
         if (etudiant == null) {
-            System.out.println("❌ Étudiant non trouvé.");
+            System.out.println(" Étudiant non trouvé.");
             return;
         }
         
@@ -559,7 +559,7 @@ public class Menu {
         
         Matiere matiere = matiereService.rechercherMatiere(matiereCode);
         if (matiere == null) {
-            System.out.println("❌ Matière non trouvée.");
+            System.out.println(" Matière non trouvée.");
             return;
         }
         
@@ -568,7 +568,7 @@ public class Menu {
         scanner.nextLine();
         
         if (valeur < 0 || valeur > 20) {
-            System.out.println("❌ La note doit être entre 0 et 20.");
+            System.out.println(" La note doit être entre 0 et 20.");
             return;
         }
         
@@ -578,9 +578,9 @@ public class Menu {
         Note note = new Note(etudiantId, matiereCode, valeur, "", type);
         
         if (noteService.ajouterNote(note)) {
-            System.out.println("✅ Note ajoutée avec succès !");
+            System.out.println(" Note ajoutée avec succès !");
         } else {
-            System.out.println("❌ Erreur lors de l'ajout de la note.");
+            System.out.println(" Erreur lors de l'ajout de la note.");
         }
     }
     
@@ -601,9 +601,9 @@ public class Menu {
         scanner.nextLine();
         
         if (noteService.modifierNote(etudiantId, matiereCode, valeur)) {
-            System.out.println("✅ Note modifiée avec succès !");
+            System.out.println(" Note modifiée avec succès !");
         } else {
-            System.out.println("❌ Note non trouvée ou valeur invalide.");
+            System.out.println(" Note non trouvée ou valeur invalide.");
         }
     }
     
@@ -624,9 +624,9 @@ public class Menu {
         
         if (confirmation.equalsIgnoreCase("O")) {
             if (noteService.supprimerNote(etudiantId, matiereCode)) {
-                System.out.println("✅ Note supprimée avec succès !");
+                System.out.println(" Note supprimée avec succès !");
             } else {
-                System.out.println("❌ Note non trouvée.");
+                System.out.println(" Note non trouvée.");
             }
         } else {
             System.out.println("ℹ Suppression annulée.");
@@ -645,7 +645,7 @@ public class Menu {
         Etudiant etudiant = etudiantService.rechercherEtudiant(etudiantId);
         
         if (etudiant == null) {
-            System.out.println("❌ Étudiant non trouvé.");
+            System.out.println(" Étudiant non trouvé.");
             return;
         }
         
@@ -701,11 +701,11 @@ public class Menu {
                         retour = true;
                         break;
                     default:
-                        System.out.println("❌ Choix invalide.");
+                        System.out.println(" Choix invalide.");
                 }
                 
             } catch (InputMismatchException e) {
-                System.out.println("❌ Erreur : Veuillez entrer un nombre valide.");
+                System.out.println(" Erreur : Veuillez entrer un nombre valide.");
                 scanner.nextLine();
             }
         }
@@ -757,13 +757,13 @@ public class Menu {
         System.out.println("─".repeat(50));
         
         if (moyenne >= 14) {
-            System.out.println("📊 Niveau : Excellent");
+            System.out.println(" Niveau : Excellent");
         } else if (moyenne >= 12) {
-            System.out.println("📊 Niveau : Bien");
+            System.out.println(" Niveau : Bien");
         } else if (moyenne >= 10) {
-            System.out.println("📊 Niveau : Passable");
+            System.out.println(" Niveau : Passable");
         } else {
-            System.out.println("📊 Niveau : Insuffisant");
+            System.out.println(" Niveau : Insuffisant");
         }
     }
     
@@ -779,17 +779,17 @@ public class Menu {
         double moyenneGenerale = etudiantService.calculerMoyenneGenerale();
         
         System.out.println("─".repeat(50));
-        System.out.printf("📚 Nombre d'étudiants : %d\n", nbEtudiants);
-        System.out.printf("📖 Nombre de matières : %d\n", nbMatieres);
-        System.out.printf("📝 Nombre de notes : %d\n", nbNotes);
-        System.out.printf("📊 Moyenne générale : %.2f/20\n", moyenneGenerale);
+        System.out.printf(" Nombre d'étudiants : %d\n", nbEtudiants);
+        System.out.printf(" Nombre de matières : %d\n", nbMatieres);
+        System.out.printf(" Nombre de notes : %d\n", nbNotes);
+        System.out.printf(" Moyenne générale : %.2f/20\n", moyenneGenerale);
         System.out.println("─".repeat(50));
         
         // Meilleur étudiant
         if (nbEtudiants > 0) {
             List<Etudiant> classement = etudiantService.obtenirClassement();
             Etudiant meilleur = classement.get(0);
-            System.out.println("\n🏆 Meilleur étudiant :");
+            System.out.println("\n Meilleur étudiant :");
             System.out.printf("   %s - Moyenne: %.2f/20\n", 
                              meilleur.getNomComplet(), meilleur.calculerMoyenne());
         }
@@ -801,23 +801,23 @@ public class Menu {
      * Sauvegarde toutes les données
      */
     private void sauvegarderDonnees() {
-        System.out.println("\n💾 Sauvegarde en cours...");
+        System.out.println("\n Sauvegarde en cours...");
         GestionFichier.sauvegarderTout(etudiantService, matiereService, noteService);
-        System.out.println("✅ Données sauvegardées avec succès !");
+        System.out.println(" Données sauvegardées avec succès !");
     }
     
     /**
      * Quitte l'application
      */
     private boolean quitterApplication() {
-        System.out.print("\n⚠️  Voulez-vous sauvegarder avant de quitter ? (O/N) : ");
+        System.out.print("\n⚠  Voulez-vous sauvegarder avant de quitter ? (O/N) : ");
         String reponse = scanner.nextLine();
         
         if (reponse.equalsIgnoreCase("O")) {
             sauvegarderDonnees();
         }
         
-        System.out.println("\n👋 Merci d'avoir utilisé le Système de Gestion Universitaire !");
+        System.out.println("\n Merci d'avoir utilisé le Système de Gestion Universitaire !");
         System.out.println("À bientôt !\n");
         
         scanner.close();
