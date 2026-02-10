@@ -84,11 +84,11 @@ public class Menu {
                         continuer = quitterApplication();
                         break;
                     default:
-                        System.out.println("❌ Choix invalide. Veuillez réessayer.");
+                        System.out.println("Choix invalide. Veuillez réessayer.");
                 }
                 
             } catch (InputMismatchException e) {
-                System.out.println("❌ Erreur : Veuillez entrer un nombre valide.");
+                System.out.println("Erreur : Veuillez entrer un nombre valide.");
                 scanner.nextLine(); // Vider le buffer
             }
         }
@@ -137,11 +137,11 @@ public class Menu {
                         retour = true;
                         break;
                     default:
-                        System.out.println("❌ Choix invalide.");
+                        System.out.println(" Choix invalide.");
                 }
                 
             } catch (InputMismatchException e) {
-                System.out.println("❌ Erreur : Veuillez entrer un nombre valide.");
+                System.out.println(" Erreur : Veuillez entrer un nombre valide.");
                 scanner.nextLine();
             }
         }
@@ -171,9 +171,9 @@ public class Menu {
         Etudiant etudiant = new Etudiant(id, nom, prenom, email, dateNaissance);
         
         if (etudiantService.ajouterEtudiant(etudiant)) {
-            System.out.println("✅ Étudiant ajouté avec succès !");
+            System.out.println(" Étudiant ajouté avec succès !");
         } else {
-            System.out.println("❌ Erreur lors de l'ajout de l'étudiant.");
+            System.out.println(" Erreur lors de l'ajout de l'étudiant.");
         }
     }
     
@@ -189,7 +189,7 @@ public class Menu {
         Etudiant etudiant = etudiantService.rechercherEtudiant(id);
         
         if (etudiant == null) {
-            System.out.println("❌ Étudiant non trouvé.");
+            System.out.println(" Étudiant non trouvé.");
             return;
         }
         
@@ -209,9 +209,9 @@ public class Menu {
         if (email.isEmpty()) email = etudiant.getEmail();
         
         if (etudiantService.modifierEtudiant(id, nom, prenom, email)) {
-            System.out.println("✅ Étudiant modifié avec succès !");
+            System.out.println(" Étudiant modifié avec succès !");
         } else {
-            System.out.println("❌ Erreur lors de la modification.");
+            System.out.println("Erreur lors de la modification.");
         }
     }
     
@@ -227,7 +227,7 @@ public class Menu {
         Etudiant etudiant = etudiantService.rechercherEtudiant(id);
         
         if (etudiant == null) {
-            System.out.println("❌ Étudiant non trouvé.");
+            System.out.println(" Étudiant non trouvé.");
             return;
         }
         
@@ -237,9 +237,9 @@ public class Menu {
         
         if (confirmation.equalsIgnoreCase("O")) {
             if (etudiantService.supprimerEtudiant(id)) {
-                System.out.println("✅ Étudiant supprimé avec succès !");
+                System.out.println(" Étudiant supprimé avec succès !");
             } else {
-                System.out.println("❌ Erreur lors de la suppression.");
+                System.out.println(" Erreur lors de la suppression.");
             }
         } else {
             System.out.println("ℹ Suppression annulée.");
@@ -281,7 +281,7 @@ public class Menu {
         Etudiant etudiant = etudiantService.rechercherEtudiant(id);
         
         if (etudiant != null) {
-            System.out.println("\n✅ Étudiant trouvé :");
+            System.out.println("\n Étudiant trouvé :");
             System.out.println(etudiant);
             
             // Afficher les notes
@@ -293,7 +293,7 @@ public class Menu {
                 }
             }
         } else {
-            System.out.println("❌ Étudiant non trouvé.");
+            System.out.println(" Étudiant non trouvé.");
         }
     }
     
@@ -340,11 +340,11 @@ public class Menu {
                         retour = true;
                         break;
                     default:
-                        System.out.println("❌ Choix invalide.");
+                        System.out.println(" Choix invalide.");
                 }
                 
             } catch (InputMismatchException e) {
-                System.out.println("❌ Erreur : Veuillez entrer un nombre valide.");
+                System.out.println(" Erreur : Veuillez entrer un nombre valide.");
                 scanner.nextLine();
             }
         }
@@ -369,9 +369,9 @@ public class Menu {
         Matiere matiere = new Matiere(code, nom, coefficient);
         
         if (matiereService.ajouterMatiere(matiere)) {
-            System.out.println("✅ Matière ajoutée avec succès !");
+            System.out.println(" Matière ajoutée avec succès !");
         } else {
-            System.out.println("❌ Erreur : Cette matière existe déjà.");
+            System.out.println(" Erreur : Cette matière existe déjà.");
         }
     }
     
@@ -387,7 +387,7 @@ public class Menu {
         Matiere matiere = matiereService.rechercherMatiere(code);
         
         if (matiere == null) {
-            System.out.println("❌ Matière non trouvée.");
+            System.out.println(" Matière non trouvée.");
             return;
         }
         
