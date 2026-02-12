@@ -9,8 +9,7 @@ import util.Menu;
 /**
  * Classe principale du Système de Gestion Universitaire
  * Point d'entrée de l'application
- * @author Votre Nom
- * @version 1.0
+ 
  */
 public class MainApp {
     
