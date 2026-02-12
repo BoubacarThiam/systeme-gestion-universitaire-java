@@ -8,7 +8,7 @@ import util.Menu;
 
 /**
  * Classe principale du Système de Gestion Universitaire
- * Point d'entrée de l'application
+ * Point d'entrée de l'application.
  
  */
 public class MainApp {
