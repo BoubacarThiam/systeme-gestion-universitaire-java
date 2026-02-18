@@ -1,0 +1,5 @@
+ETU0001;Diop;Amadou;amadou.diop@univ.sn;15/03/2002
+ETU0002;Ndiaye;Fatou;fatou.ndiaye@univ.sn;22/07/2003
+ETU0003;Seck;Moussa;moussa.seck@univ.sn;10/11/2002
+ETU0004;Thiam;Boubacar;boubacarthiam005@icloud.com;23/02/2004
+ETU0005;Pape;Ndiaye;pape003@gmail.com;20022004

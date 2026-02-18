@@ -7,7 +7,7 @@ import util.GestionFichier;
 import util.Menu;
 
 /**
- * Classe principale du Système de Gestion Universitaire
+ * Classe principale du Système de Gestion Universitaire.
  * Point d'entrée de l'application.
  
  */
