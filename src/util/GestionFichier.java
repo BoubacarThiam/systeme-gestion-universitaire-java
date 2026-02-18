@@ -25,7 +25,7 @@ public class GestionFichier {
     private static final String FICHIER_ENSEIGNANTS = DOSSIER_DATA + "enseignants.txt";
     
     /**
-     * Crée le dossier data s'il n'existe pas
+     * Crée le dossier data s'il n'existe pas.
      */
     public static void initialiserDossierData() {
         File dossier = new File(DOSSIER_DATA);
