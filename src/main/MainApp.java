@@ -35,9 +35,9 @@ public class MainApp {
         // Message de bienvenue
         System.out.println("\n Bienvenue dans le Système de Gestion Universitaire");
         System.out.println("─".repeat(55));
-        System.out.println("Étudiants chargés : " + etudiantService.compterEtudiants());
-        System.out.println("Matières chargées : " + matiereService.compterMatieres());
-        System.out.println("Notes chargées : " + noteService.compterNotes());
+        System.out.println("Étudiants chargés  : " + etudiantService.compterEtudiants());
+        System.out.println("Matières chargées  : " + matiereService.compterMatieres());
+        System.out.println("Notes chargées   : " + noteService.compterNotes());
         System.out.println("─".repeat(55));
         
         // Lancement du menu principal
