@@ -13,7 +13,7 @@ import java.util.List;
 
 /**
  * Classe utilitaire pour la gestion de la persistance des données
- * Sauvegarde et chargement depuis des fichiers texte
+ * Sauvegarde et chargement depuis des fichiers texte.
  */
 public class GestionFichier {
     
@@ -43,7 +43,7 @@ public class GestionFichier {
      */
     public static void sauvegarderEtudiants(EtudiantService etudiantService) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(FICHIER_ETUDIANTS))) {
-            List<Etudiant> etudiants = etudiantService.listerEtudiants();
+            List <Etudiant> etudiants = etudiantService.listerEtudiants();
             
             for (Etudiant etudiant : etudiants) {
                 writer.write(etudiant.toFileFormat());
@@ -83,7 +83,7 @@ public class GestionFichier {
      */
     public static void sauvegarderNotes(NoteService noteService) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(FICHIER_NOTES))) {
-            List<Note> notes = noteService.listerToutesLesNotes();
+            List <Note> notes = noteService.listerToutesLesNotes();
             
             for (Note note : notes) {
                 writer.write(note.toFileFormat());
@@ -129,7 +129,8 @@ public class GestionFichier {
             String ligne;
             int compteur = 0;
             
-            while ((ligne = reader.readLine()) != null) {
+            while ((ligne = reader.readLine()) != null) 
+            {
                 if (ligne.trim().isEmpty()) continue;
                 
                 String[] donnees = ligne.split(";");
@@ -150,7 +151,7 @@ public class GestionFichier {
             System.out.println("✓ " + compteur + " étudiant(s) chargé(s).");
             
         } catch (IOException e) {
-            System.err.println("✗ Erreur lors du chargement des étudiants : " + e.getMessage());
+            System.err.println("✗ Erreur lors du chargement des étudiants  : " + e.getMessage());
         }
     }
     
@@ -159,10 +160,10 @@ public class GestionFichier {
      * @param matiereService le service où charger les matières
      */
     public static void chargerMatieres(MatiereService matiereService) {
-        File fichier = new File(FICHIER_MATIERES);
+        File fichier = new File (FICHIER_MATIERES);
         
         if (!fichier.exists()) {
-            System.out.println("ℹ Aucun fichier de matières trouvé.");
+            System.out.println("ℹ Aucun fichier de matières trouvé");
             return;
         }
         
