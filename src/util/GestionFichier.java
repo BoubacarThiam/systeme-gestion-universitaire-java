@@ -59,11 +59,11 @@ public class GestionFichier {
     
     /**
      * Sauvegarde toutes les matières dans le fichier
-     * @param matiereService le service contenant les matières
+     * @param matiereService le service contenant les matières.
      */
     public static void sauvegarderMatieres(MatiereService matiereService) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(FICHIER_MATIERES))) {
-            List<Matiere> matieres = matiereService.listerMatieres();
+            List <Matiere> matieres = matiereService.listerMatieres();
             
             for (Matiere matiere : matieres) {
                 writer.write(matiere.toFileFormat());
@@ -79,7 +79,7 @@ public class GestionFichier {
     
     /**
      * Sauvegarde toutes les notes dans le fichier
-     * @param noteService le service contenant les notes
+     * @param noteService le service contenant les notes.
      */
     public static void sauvegarderNotes(NoteService noteService) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(FICHIER_NOTES))) {
