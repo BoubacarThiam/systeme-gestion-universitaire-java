@@ -40,7 +40,7 @@ public class MainApp {
         System.out.println("Notes chargées   : " + noteService.compterNotes());
         System.out.println("─".repeat(55));
         
-        // Lancement du menu principal
+        // Lancement du menu principal.
         menu.afficherMenuPrincipal();
     }
 }
